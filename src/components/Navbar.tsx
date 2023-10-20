@@ -1,10 +1,19 @@
-import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/react.svg";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
+  const [size, setSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setSize(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleClick = () => setNav(!nav);
 
@@ -28,14 +37,14 @@ function Navbar() {
       </ul>
 
       <div onClick={handleClick} className="md:hidden z-10">
-        {!nav ? <FaBars /> : <FaTimes />}
+        {nav ? <FaTimes /> : <FaBars />}
       </div>
 
       <ul
         className={
-          !nav
-            ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-[#08192f] flex flex-col justify-center items-center"
+          nav && size < 768
+            ? "absolute top-0 left-0 w-full h-screen bg-[#08192f] flex flex-col justify-center items-center"
+            : "hidden"
         }
       >
         <li className="py-6 text-4xl">Home</li>
