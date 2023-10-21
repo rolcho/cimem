@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { Link } from "react-scroll";
+
 import Logo from "../assets/cimem.png";
 
 function Navbar(props: {
@@ -24,18 +26,52 @@ function Navbar(props: {
     props.typing === "" ? props.setTyping("hidden") : props.setTyping("");
   };
 
+  const changeNav = () => {
+    setNav(!nav);
+    props.setTyping("");
+  };
+
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#080e2f] text-gray-300">
       <div>
-        <img src={Logo} alt="Logo image" width={"40px"} height={"40px"} />
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          className="flex items-center justify-center gap-2"
+        >
+          <img src={Logo} alt="Logo image" width={"40px"} height={"40px"} />
+          <p className="text-2xl font-light">cimem</p>
+        </Link>
       </div>
 
       <ul className="hidden md:flex">
-        <li>Home</li>
-        <li>About</li>
-        <li>Skills</li>
-        <li>Work</li>
-        <li>Contact</li>
+        <li className="hover:text-[#ffba18]">
+          <Link to="home" smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+
+        <li className="hover:text-[#ffba18]">
+          <Link to="about" smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li className="hover:text-[#ffba18]">
+          <Link to="skills" smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li className="hover:text-[#ffba18]">
+          <Link to="work" smooth={true} duration={500}>
+            Work
+          </Link>
+        </li>
+        <li className="hover:text-[#ffba18]">
+          <Link to="contact" smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       <div
@@ -52,11 +88,31 @@ function Navbar(props: {
             : "hidden"
         }
       >
-        <li className="py-6 text-4xl hover:text-[#ffba18]">Home</li>
-        <li className="py-6 text-4xl hover:text-[#ffba18]">About</li>
-        <li className="py-6 text-4xl hover:text-[#ffba18]">Skills</li>
-        <li className="py-6 text-4xl hover:text-[#ffba18]">Work</li>
-        <li className="py-6 text-4xl hover:text-[#ffba18]">Contact</li>
+        <li className="py-6 text-4xl hover:text-[#ffba18]">
+          <Link onClick={changeNav} to="home">
+            Home
+          </Link>
+        </li>
+        <li className="py-6 text-4xl hover:text-[#ffba18]">
+          <Link onClick={changeNav} to="about">
+            About
+          </Link>
+        </li>
+        <li className="py-6 text-4xl hover:text-[#ffba18]">
+          <Link onClick={changeNav} to="skills">
+            Skills
+          </Link>
+        </li>
+        <li className="py-6 text-4xl hover:text-[#ffba18]">
+          <Link onClick={changeNav} to="work">
+            Work
+          </Link>
+        </li>
+        <li className="py-6 text-4xl hover:text-[#ffba18]">
+          <Link onClick={changeNav} to="work">
+            Contact
+          </Link>
+        </li>
       </ul>
 
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
