@@ -18,7 +18,7 @@ function Skills() {
         <div className="max-w-[1000px] w-full px-4 gap-8">
           <div className="pb-8">
             <p className="text-3xl font-light inline border-b-4 border-[#ffba18]">
-              #expreience
+              #experience
             </p>
           </div>
         </div>
