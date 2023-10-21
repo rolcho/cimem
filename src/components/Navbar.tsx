@@ -109,7 +109,7 @@ function Navbar(props: {
           </Link>
         </li>
         <li className="py-6 text-4xl hover:text-[#ffba18]">
-          <Link onClick={changeNav} to="work">
+          <Link onClick={changeNav} to="contact">
             Contact
           </Link>
         </li>
