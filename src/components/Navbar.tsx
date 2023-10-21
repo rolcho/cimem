@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import Logo from "../assets/react.svg";
+import Logo from "../assets/cimem.png";
 
-function Navbar() {
+function Navbar(props: {
+  typing: string;
+  setTyping: (arg0: string) => unknown;
+}) {
   const [nav, setNav] = useState(false);
   const [size, setSize] = useState(window.innerWidth);
 
@@ -16,12 +19,15 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleClick = () => setNav(!nav);
+  const handleClick = () => {
+    setNav(!nav);
+    props.typing === "" ? props.setTyping("hidden") : props.setTyping("");
+  };
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#080e2f] text-gray-300">
       <div>
-        <img src={Logo} alt="Logo image" />
+        <img src={Logo} alt="Logo image" width={"40px"} height={"40px"} />
       </div>
 
       <ul className="hidden md:flex">
@@ -59,6 +65,7 @@ function Navbar() {
             <a
               className="flex items-center justify-between w-full text-gray-300"
               href="https://www.linkedin.com/in/roland-nagy-rolcho/"
+              target="_blank"
             >
               LinkedIn <FaLinkedin size={30} />
             </a>
@@ -67,6 +74,7 @@ function Navbar() {
             <a
               className="flex items-center justify-between w-full text-gray-300"
               href="https://github.com/rolcho"
+              target="_blank"
             >
               GitHub <FaGithub size={30} />
             </a>

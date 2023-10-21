@@ -1,16 +1,16 @@
 import Typewriter from "typewriter-effect";
 
-function Home() {
+function Home(props: { typing: string }) {
   return (
-    <div className="bg-[#080e2f] w-full h-screen">
+    <div className="bg-[#080e2f] w-full h-screen lg:pl-[20%] md:pl-[5%] duration-500">
       <div className="max-w[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-[#ffba18]">Hi, my name is</p>
-        <h1 className="text-4xl sm:text-7xl font-bold text-[#c3cbe7]">
+        <h1 className="text-5xl sm:text-7xl font-bold text-[#c3cbe7] duration-300">
           Roland Nagy
         </h1>
-        <h2 className="text-3xl sm:text-5xl font-medium text-[#8892b0] flex gap-4">
+        <h2 className="text-3xl sm:text-5xl font-medium text-[#8892b0] flex gap-3 duration-300">
           I'm a{" "}
-          <span className="text-[#ffba18]">
+          <span className={`text-[#ffba18] ${props.typing}`}>
             <Typewriter
               options={{
                 strings: [
