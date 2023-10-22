@@ -17,7 +17,7 @@ function Contact() {
           </p>
           <p className="pt-4">
             submit the form below or send me an e-mail -{" "}
-            <strong>roland@cimem.hu</strong>
+            <strong>roland [at] cimem.hu</strong>
           </p>
         </div>
         <input
