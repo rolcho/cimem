@@ -10,23 +10,22 @@ import IconPostgres from "../assets/icons/postgres.png";
 import IconTypescript from "../assets/icons/typescript.png";
 import IconGithub from "../assets/icons/github.png";
 import IconHtml from "../assets/icons/html.png";
+import { Skills } from "../interfaces/Skills";
 
-function Skills() {
+function Skills(props: { skillsText: Skills }) {
   return (
     <div id="skills" className="w-full h-screen bg-[#080e2f] text-gray-300">
       <div className="flex flex-col items-center justify-center w-full h-full">
         <div className="max-w-[1000px] w-full px-4 gap-8">
           <div className="pb-8">
             <p className="text-3xl font-light inline border-b-4 border-[#ffba18]">
-              #experience
+              {props.skillsText.title}
             </p>
           </div>
         </div>
         <div className="max-w-[1000px] w-full px-4 gap-8">
           <div>
-            <p className="text-4xl font-bold">
-              technologies I have already used in some of my projects.
-            </p>
+            <p className="text-4xl font-bold">{props.skillsText.short}</p>
           </div>
           <div className="grid w-full grid-cols-3 gap-4 py-8 text-center sm:grid-cols-6">
             <div className="font-medium duration-500 text-1xl hover:scale-125">

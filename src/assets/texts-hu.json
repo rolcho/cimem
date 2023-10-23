@@ -1,0 +1,50 @@
+{
+  "about": {
+    "title": "#rólam",
+    "short": "Helló. Roland vagyok, egy kezdő full stack fejlesztő. Nézz körül bátran nálam.",
+    "long": "A középiskolai padból kiesve az volt a tervem, hogy belevetem magam a programozásba, de az életnek más tervei voltak, és végül a kreatív szakámban kötöttem ki. Évekig dolgoztam Magyarország legnagyobb nyomtatott sajtóvállalataival, az utóbbi időben saját cégben vezettem egy kisebb csapatot. Azt gondolom, amit lehetett ezen a területen már elértem. most kész vagyok visszatérni a gyökereimhez, és új kihívásokat keresni a fejlesztésben. a grafikai tervezés, a projektszervezés és a csapatmunka terén szerzett tapasztalataimmal – a kis cégektől a nagyokig – készen állok a sikerre."
+  },
+  "contact": {
+    "title": "#írj-nekem",
+    "short": "töltsd ki a vagy küldj e-mailt nekem - roland [kukac] cimem.hu",
+    "name": "Neved",
+    "email": "E-mail címed",
+    "message": "Üzeneted",
+    "submit": "gyerünk!"
+  },
+  "home": {
+    "hello": "Helló, a nevem",
+    "name": "Nagy Roland",
+    "iam": "Foglalkozom ",
+    "typewriter": ["fejlesztéssel.", "kreatív tervezéssel.", "dizájnnal."],
+    "long": "Miután negyedszázadot szenteltem a kreatív szakmának, most készen állok valami teljesen újra. Fejlesztőként óriási elégedettséggel tölt el az új technológiák és programozási nyelvek felfedezése. Ez a szenvedély a grafikai tervezésben szerzett kiterjedt tapasztalatommal párosítva megnyitja az utat a kreativitás soha nem látott birodalma előtt.",
+    "submit": "Munkáim"
+  },
+  "navbar": {
+    "home": "Kezdőlap",
+    "about": "Rólam",
+    "skills": "Tudásom",
+    "work": "Munkáim",
+    "contact": "Keress meg!"
+  },
+  "skills": {
+    "title": "#tapasztalatok",
+    "short": "technológáik, amiket már használtam a munkáimban."
+  },
+  "work": {
+    "title": "#munkáim",
+    "short": "néhány kíséreltezésem",
+    "project": [
+      {
+        "name": "mebay",
+        "description": "kísérleti projekt, hogyan lehet typescriptben natív mobilalkalmazást készíteni.",
+        "techstack": "technológiák: #ionic #dotnet #postgres",
+        "source": "forrás",
+        "open": "lássuk",
+        "image": "/public/mebay.png",
+        "sourceLink": "https://github.com/rolcho/mebay",
+        "deployLink": "https://mebay-app.fly.dev"
+      }
+    ]
+  }
+}

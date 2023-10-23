@@ -2,15 +2,21 @@ import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
+import { Navbar } from "../interfaces/Navbar";
 
 import Logo from "../assets/cimem.png";
 
 function Navbar(props: {
   typing: string;
   setTyping: (arg0: string) => unknown;
+  navText: Navbar;
+  english: boolean;
+  setEnglish: (arg0: boolean) => unknown;
 }) {
   const [nav, setNav] = useState(false);
   const [size, setSize] = useState(window.innerWidth);
+
+  const navItems = ["home", "about", "skills", "work", "contact"];
 
   useEffect(() => {
     function handleResize() {
@@ -31,6 +37,10 @@ function Navbar(props: {
     props.setTyping("");
   };
 
+  const changeLanguage = () => {
+    props.setEnglish(!props.english);
+  };
+
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#080e2f] text-gray-300">
       <div>
@@ -46,39 +56,28 @@ function Navbar(props: {
       </div>
 
       <ul className="hidden md:flex">
-        <li className="hover:text-[#ffba18]">
-          <Link to="home" smooth={true} duration={500}>
-            Home
-          </Link>
-        </li>
-
-        <li className="hover:text-[#ffba18]">
-          <Link to="about" smooth={true} duration={500}>
-            About
-          </Link>
-        </li>
-        <li className="hover:text-[#ffba18]">
-          <Link to="skills" smooth={true} duration={500}>
-            Skills
-          </Link>
-        </li>
-        <li className="hover:text-[#ffba18]">
-          <Link to="work" smooth={true} duration={500}>
-            Work
-          </Link>
-        </li>
-        <li className="hover:text-[#ffba18]">
-          <Link to="contact" smooth={true} duration={500}>
-            Contact
-          </Link>
+        {navItems.map((item) => (
+          <li className="hover:text-[#ffba18]" key={item}>
+            <Link to={item} smooth={true} duration={500}>
+              {props.navText[item]}
+            </Link>
+          </li>
+        ))}
+        <li onClick={changeLanguage} className="z-10  hover:text-[#ffba18]">
+          HU/EN
         </li>
       </ul>
 
-      <div
-        onClick={handleClick}
-        className="z-10 md:hidden hover:text-[#ffba18]"
-      >
-        {nav ? <FaTimes /> : <FaBars />}
+      <div className="flex items-center gap-4 md:hidden">
+        <div
+          onClick={changeLanguage}
+          className="z-10 md:hidden hover:text-[#ffba18]"
+        >
+          HU/EN
+        </div>
+        <div onClick={handleClick} className="z-10 hover:text-[#ffba18]">
+          {nav ? <FaTimes /> : <FaBars />}
+        </div>
       </div>
 
       <ul
@@ -88,31 +87,13 @@ function Navbar(props: {
             : "hidden"
         }
       >
-        <li className="py-6 text-4xl hover:text-[#ffba18]">
-          <Link onClick={changeNav} to="home">
-            Home
-          </Link>
-        </li>
-        <li className="py-6 text-4xl hover:text-[#ffba18]">
-          <Link onClick={changeNav} to="about">
-            About
-          </Link>
-        </li>
-        <li className="py-6 text-4xl hover:text-[#ffba18]">
-          <Link onClick={changeNav} to="skills">
-            Skills
-          </Link>
-        </li>
-        <li className="py-6 text-4xl hover:text-[#ffba18]">
-          <Link onClick={changeNav} to="work">
-            Work
-          </Link>
-        </li>
-        <li className="py-6 text-4xl hover:text-[#ffba18]">
-          <Link onClick={changeNav} to="contact">
-            Contact
-          </Link>
-        </li>
+        {navItems.map((item) => (
+          <li className="py-6 text-4xl hover:text-[#ffba18]">
+            <Link onClick={changeNav} to={item}>
+              {props.navText[item]}
+            </Link>
+          </li>
+        ))}
       </ul>
 
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">

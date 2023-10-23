@@ -1,6 +1,7 @@
 import { HiOutlineMail } from "react-icons/hi";
+import { Contact } from "../interfaces/Contact";
 
-function Contact() {
+function Contact(props: { contactText: Contact }) {
   return (
     <div
       id="contact"
@@ -13,34 +14,31 @@ function Contact() {
       >
         <div className="pb-8">
           <p className="text-3xl font-light inline border-b-4 border-[#ffba18] text-left">
-            #contact<strong className="font-bold">me</strong>
+            {props.contactText.title}
           </p>
-          <p className="pt-4">
-            submit the form below or send me an e-mail -{" "}
-            <strong>roland [at] cimem.hu</strong>
-          </p>
+          <p className="pt-4">{props.contactText.short}</p>
         </div>
         <input
           className="bg-[#ccd6f6] p-2 rounded-md text-gray-900"
           type="text"
-          placeholder="Name"
+          placeholder={props.contactText.name}
           name="name"
         />
         <input
           className="bg-[#ccd6f6] p-2 rounded-md text-gray-900"
           type="text"
-          placeholder="Email"
+          placeholder={props.contactText.email}
           name="email"
         />
         <textarea
           className="bg-[#ccd6f6] p-2 rounded-md text-gray-900"
           rows={10}
           name="message"
-          placeholder="Message"
+          placeholder={props.contactText.message}
         />
         <button className="w-[200px] rounded-lg px-6 py-3 text-white border-2 hover:bg-[#ffba18] hover:border-[#ffba18] hover:text-[#080e2f] flex justify-center items-center gap-2">
           <HiOutlineMail />
-          let's go!
+          {props.contactText.submit}
         </button>
       </form>
     </div>
