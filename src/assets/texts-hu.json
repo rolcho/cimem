@@ -6,7 +6,7 @@
   },
   "contact": {
     "title": "#írj-nekem",
-    "short": "töltsd ki a vagy küldj e-mailt nekem - roland [kukac] cimem.hu",
+    "short": "töltsd ki, vagy küldj e-mailt nekem - roland [kukac] cimem.hu",
     "name": "Neved",
     "email": "E-mail címed",
     "message": "Üzeneted",
@@ -15,8 +15,8 @@
   "home": {
     "hello": "Helló, a nevem",
     "name": "Nagy Roland",
-    "iam": "Foglalkozom ",
-    "typewriter": ["fejlesztéssel.", "kreatív tervezéssel.", "dizájnnal."],
+    "iam": "Ez vagyok:",
+    "typewriter": ["fejlesztő.", "tervező.", "dizájner."],
     "long": "Miután negyedszázadot szenteltem a kreatív szakmának, most készen állok valami teljesen újra. Fejlesztőként óriási elégedettséggel tölt el az új technológiák és programozási nyelvek felfedezése. Ez a szenvedély a grafikai tervezésben szerzett kiterjedt tapasztalatommal párosítva megnyitja az utat a kreativitás soha nem látott birodalma előtt.",
     "submit": "Munkáim"
   },

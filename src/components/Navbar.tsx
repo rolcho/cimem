@@ -81,6 +81,7 @@ function Navbar(props: {
       </div>
 
       <ul
+        key="hambruger"
         className={
           nav && size < 768
             ? "absolute top-0 left-0 w-full h-screen bg-[#080e2f] flex flex-col justify-center items-center"

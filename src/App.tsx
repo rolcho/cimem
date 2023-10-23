@@ -10,8 +10,10 @@ import LanguageEn from "./assets/texts-en.json";
 import LanugageHu from "./assets/texts-hu.json";
 
 function App() {
+  const browserLanguage = navigator.language;
+
   const [typing, setTyping] = useState("");
-  const [english, setEnglish] = useState(true);
+  const [english, setEnglish] = useState(browserLanguage !== "hu-HU");
 
   const texts = english ? LanguageEn : LanugageHu;
 
