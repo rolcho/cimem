@@ -41,7 +41,7 @@
         "techstack": "techstack: #ionic #dotnet #postgres",
         "source": "source",
         "open": "open",
-        "image": "/public/mebay.png",
+        "image": "./public/mebay.png",
         "sourceLink": "https://github.com/rolcho/mebay",
         "deployLink": "https://mebay-app.fly.dev"
       }
