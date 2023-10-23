@@ -41,7 +41,7 @@
         "techstack": "technológiák: #ionic #dotnet #postgres",
         "source": "forrás",
         "open": "lássuk",
-        "image": "./assets/mebay.png",
+        "image": "/mebay.png",
         "sourceLink": "https://github.com/rolcho/mebay",
         "deployLink": "https://mebay-app.fly.dev"
       }
