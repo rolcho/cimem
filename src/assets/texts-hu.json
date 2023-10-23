@@ -38,7 +38,7 @@
       {
         "name": "mebay",
         "description": "kísérleti projekt, hogyan lehet typescriptben natív mobilalkalmazást készíteni.",
-        "techstack": "technológiák: #ionic #dotnet #postgres",
+        "techstack": "technológiák: #ionic #dotnet #postgresql",
         "source": "forrás",
         "open": "lássuk",
         "image": "/mebay.png",

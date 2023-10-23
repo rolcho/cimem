@@ -38,7 +38,7 @@
       {
         "name": "mebay",
         "description": "experimental project to create buy and sell native mobile application for used items using typescript.",
-        "techstack": "techstack: #ionic #dotnet #postgres",
+        "techstack": "techstack: #ionic #dotnet #postgresql",
         "source": "source",
         "open": "open",
         "image": "/mebay.png",
