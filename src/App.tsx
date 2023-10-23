@@ -6,18 +6,29 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
+import LanguageEn from "./assets/texts-en.json";
+import LanugageHu from "./assets/texts-hu.json";
 
 function App() {
   const [typing, setTyping] = useState("");
+  const [english, setEnglish] = useState(true);
+
+  const texts = english ? LanguageEn : LanugageHu;
 
   return (
     <div>
-      <Navbar typing={typing} setTyping={setTyping} />
-      <Home typing={typing} />
-      <About />
-      <Skills />
-      <Work />
-      <Contact />
+      <Navbar
+        typing={typing}
+        setTyping={setTyping}
+        navText={texts.navbar}
+        english={english}
+        setEnglish={setEnglish}
+      />
+      <Home typing={typing} homeText={texts.home} />
+      <About aboutText={texts.about} />
+      <Skills skillsText={texts.skills} />
+      <Work workText={texts.work} />
+      <Contact contactText={texts.contact} />
     </div>
   );
 }

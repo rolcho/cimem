@@ -1,0 +1,50 @@
+{
+  "about": {
+    "title": "#about",
+    "short": "hi there. I'm Roland, a junior full stack developer. please just take a look around.",
+    "long": " so, straight out of high school, I was all set to dive into programming. but life had other plans and I ended up in the creative biz. for many years, I worked with some of the biggest print media companies in Hungary, leading a small team. it was a blast, but I’ve done it all in that field. now, I’m stoked to get back to my roots and take on new challenges in programming. with all the skills I’ve picked up in graphic design, project organizing, and teamwork - from small companies to big international ones - I’m ready to rock this!"
+  },
+  "contact": {
+    "title": "#contact-me",
+    "short": "submit the form below or send me an e-mail - <strong>roland [at] cimem.hu</strong>",
+    "name": "Name",
+    "email": "E-mail",
+    "message": "Message",
+    "submit": "let's go!"
+  },
+  "home": {
+    "hello": "Hi, my name is",
+    "name": "Roland Nagy",
+    "iam": "I'm a",
+    "typewriter": ["Developer.", "Creator.", "Designer.", "Professional."],
+    "long": "having dedicated a quarter of a century to the creative profession, I am now poised to embark on a novel venture. as a developer, I derive immense satisfaction from exploring new technologies and programming languages. this passion, coupled with my extensive experience in graphic design, paves the way for an unprecedented realm of creativity.",
+    "submit": "View Work"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "skills": {
+    "title": "#experience",
+    "short": "technologies I have already used in some of my projects."
+  },
+  "work": {
+    "title": "#projects",
+    "short": "some experimental projects",
+    "project": [
+      {
+        "name": "mebay",
+        "description": "experimental project to create buy and sell native mobile application for used items using typescript.",
+        "techstack": "techstack: #ionic #dotnet #postgres",
+        "source": "source",
+        "open": "open",
+        "image": "/public/mebay.png",
+        "sourceLink": "https://github.com/rolcho/mebay",
+        "deployLink": "https://mebay-app.fly.dev"
+      }
+    ]
+  }
+}
