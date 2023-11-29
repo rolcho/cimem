@@ -14,7 +14,7 @@ import { Skills } from "../interfaces/Skills";
 
 function Skills(props: { skillsText: Skills }) {
   return (
-    <div id="skills" className="w-full h-screen bg-[#080e2f] text-gray-300">
+    <div id="skills" className="w-full min-h-screen bg-[#080e2f] text-gray-300">
       <div className="flex flex-col items-center justify-center w-full h-full">
         <div className="max-w-[1000px] w-full px-4 gap-8">
           <div className="pb-8">
