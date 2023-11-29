@@ -3,8 +3,8 @@ export interface Project {
   description: string;
   techstack: string;
   source: string;
-  open: string | null;
+  open?: string;
   image: string;
   sourceLink: string;
-  deployLink: string | null;
+  deployLink?: string;
 }
