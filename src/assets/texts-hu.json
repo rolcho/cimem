@@ -44,6 +44,14 @@
         "image": "/mebay.png",
         "sourceLink": "https://github.com/rolcho/mebay",
         "deployLink": "https://mebay-app.fly.dev"
+      },
+      {
+        "name": "tictactoe",
+        "description": "clean code gyakorlat c#-ban, MVC model alkalmazásával.",
+        "techstack": "technológiák: #csharp #cleancode #ionic",
+        "source": "forrás",
+        "image": "/tictactoe_mvc.png",
+        "sourceLink": "https://github.com/rolcho/TicTacToe"
       }
     ]
   }

@@ -37,13 +37,21 @@
     "project": [
       {
         "name": "mebay",
-        "description": "experimental project to create buy and sell native mobile application for used items using typescript.",
+        "description": "experimental project to create buy and sell native mobile application for used items using typescript",
         "techstack": "techstack: #ionic #dotnet #postgresql",
         "source": "source",
         "open": "open",
         "image": "/mebay.png",
         "sourceLink": "https://github.com/rolcho/mebay",
         "deployLink": "https://mebay-app.fly.dev"
+      },
+      {
+        "name": "tictactoe",
+        "description": "practicing clean code principles using C# and MVC model",
+        "techstack": "techstack: #csharp #cleancode #mvc",
+        "source": "source",
+        "image": "/tictactoe_mvc.png",
+        "sourceLink": "https://github.com/rolcho/TicTacToe"
       }
     ]
   }

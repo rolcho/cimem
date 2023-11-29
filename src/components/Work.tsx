@@ -20,7 +20,7 @@ function Work(props: { workText: Work }) {
           {props.workText.project.map((project) => (
             <div
               key={project.name}
-              className="grid w-full gap-8 sm:grid-cols-2"
+              className="grid w-full gap-8 mb-8 sm:grid-cols-2"
             >
               <div
                 className="bg-[#ffba18] h-[250px] border-b4 rounded-md bg-cover bg-center hover:scale-105 duration-300"
@@ -42,12 +42,14 @@ function Work(props: { workText: Work }) {
                       {project.source}
                     </button>
                   </a>
-                  <a href={project.deployLink} target="_blank">
-                    <button className="rounded-lg px-6 py-3 text-white border-2 hover:bg-[#ffba18] hover:border-[#ffba18] hover:text-[#080e2f] flex justify-center items-center gap-2">
-                      <CgWebsite />
-                      {project.open}
-                    </button>
-                  </a>
+                  {project.deployLink && (
+                    <a href={project.deployLink} target="_blank">
+                      <button className="rounded-lg px-6 py-3 text-white border-2 hover:bg-[#ffba18] hover:border-[#ffba18] hover:text-[#080e2f] flex justify-center items-center gap-2">
+                        <CgWebsite />
+                        {project.open}
+                      </button>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
