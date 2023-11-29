@@ -42,7 +42,7 @@ function Navbar(props: {
   };
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#080e2f] text-gray-300">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#080e2f] text-gray-300 z-[9999]">
       <div>
         <Link
           to="home"
