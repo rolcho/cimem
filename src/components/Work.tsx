@@ -3,21 +3,25 @@ import { CgWebsite } from "react-icons/cg";
 import { Work } from "../interfaces/Work";
 
 function Work(props: { workText: Work }) {
+  const workText = props.workText;
   return (
-    <div id="work" className="w-full min-h-screen bg-[#080e2f] text-gray-300">
+    <div
+      id="work"
+      className="w-full min-h-screen bg-[#080e2f] text-gray-300 pt-[80px]"
+    >
       <div className="flex flex-col items-center justify-center w-full h-full">
         <div className="max-w-[1000px] w-full px-4 gap-8">
           <div className="pb-8">
             <p className="text-3xl font-light inline border-b-4 border-[#ffba18]">
-              {props.workText.title}
+              {workText.title}
             </p>
           </div>
         </div>
         <div className="max-w-[1000px] w-full px-4">
           <div>
-            <p className="pb-8 text-4xl font-bold">{props.workText.short}</p>
+            <p className="pb-8 text-4xl font-bold">{workText.short}</p>
           </div>
-          {props.workText.project.map((project) => (
+          {workText.project.map((project) => (
             <div
               key={project.name}
               className="grid w-full gap-8 mb-8 sm:grid-cols-2"
