@@ -1,5 +1,6 @@
 import Typewriter from "typewriter-effect";
 import MyPhoto from "../assets/me_gf.png";
+import MyPhotoXs from "../assets/me_gf_xs.png";
 import { Link } from "react-scroll";
 import { Home } from "../interfaces/Home";
 
@@ -7,7 +8,7 @@ function Home(props: { typing: string; homeText: Home }) {
   return (
     <div
       id="home"
-      className="bg-[#080e2f] w-full md:pl-[80px] h-screen duration-500"
+      className="w-full min-h-screen sm:h-screen bg-[#080e2f] text-gray-300 pt-[80px] sm:pt-0 sm:pl-[100px]"
     >
       <div
         style={{
@@ -16,6 +17,11 @@ function Home(props: { typing: string; homeText: Home }) {
         className="w-full h-full lg:bg-right lg:bg-no-repeat lg:bg-contain"
       >
         <div className="max-w-[1600px] mx-auto px-8 flex flex-col justify-center h-full ">
+          <img
+            src={MyPhotoXs}
+            alt="Roland Nagy"
+            className="pb-8 rounded-md sm:hidden"
+          />
           <p className="text-[#ffba18]">{props.homeText.hello}</p>
           <h1 className="text-5xl sm:text-7xl font-bold text-[#c3cbe7] duration-300">
             {props.homeText.name}
