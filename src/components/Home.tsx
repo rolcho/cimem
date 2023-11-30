@@ -16,7 +16,7 @@ function Home(props: { typing: string; homeText: Home }) {
         }}
         className="w-full h-full lg:bg-right lg:bg-no-repeat lg:bg-contain"
       >
-        <div className="max-w-[1600px] mx-auto px-8 flex flex-col justify-center h-full ">
+        <div className="max-w-[1600px] mx-auto px-4 flex flex-col justify-center h-full ">
           <img
             src={MyPhotoXs}
             alt="Roland Nagy"
