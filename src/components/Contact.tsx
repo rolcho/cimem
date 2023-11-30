@@ -19,12 +19,12 @@ function Contact(props: { contactText: Contact }) {
   return (
     <div
       id="contact"
-      className="w-full min-h-screen sm:h-screen bg-[#080e2f] text-gray-300 pt-[80px] sm:pt-0"
+      className="flex items-center justify-center w-full min-h-screen sm:h-screen bg-[#080e2f] text-gray-300 pt-[80px] sm:p-0"
     >
       <form
         method="POST"
         action="https://getform.io/f/c9dcc39f-b108-4bee-83f2-a100c07c9d48"
-        className="flex flex-col max-w-[800px] w-full gap-4 p-4"
+        className="flex flex-col max-w-[800px] w-full gap-4 p-4 "
       >
         <div className="pb-8">
           <p className="text-3xl font-light inline border-b-4 border-[#ffba18] text-left">
