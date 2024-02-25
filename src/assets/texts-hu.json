@@ -52,6 +52,14 @@
         "source": "forrás",
         "image": "/tictactoe_mvc.png",
         "sourceLink": "https://github.com/rolcho/TicTacToe"
+      },
+      {
+        "name": "todo",
+        "description": "tanuló alkalmazás állapotkezeléshez.",
+        "techstack": "technológiák: #angular #ngrx #expresss",
+        "source": "forrás",
+        "image": "/ngrx_todo.png",
+        "sourceLink": "https://github.com/rolcho/ngrx-todo"
       }
     ]
   }
