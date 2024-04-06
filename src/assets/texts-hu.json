@@ -59,7 +59,8 @@
         "techstack": "technológiák: #angular #ngrx #expresss",
         "source": "forrás",
         "image": "/ngrx_todo.png",
-        "sourceLink": "https://github.com/rolcho/ngrx-todo"
+        "sourceLink": "https://github.com/rolcho/ngrx-todo",
+        "deployLink": "https://rolcho-todo-app.up.railway.app/"
       }
     ]
   }

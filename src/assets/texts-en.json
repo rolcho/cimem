@@ -59,7 +59,8 @@
         "techstack": "techstack: #angular #ngrx #expresss",
         "source": "source",
         "image": "/ngrx_todo.png",
-        "sourceLink": "https://github.com/rolcho/ngrx-todo"
+        "sourceLink": "https://github.com/rolcho/ngrx-todo",
+        "deployLink": "https://rolcho-todo-app.up.railway.app/"
       }
     ]
   }
