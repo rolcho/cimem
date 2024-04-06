@@ -48,7 +48,7 @@
       {
         "name": "tictactoe",
         "description": "clean code gyakorlat c#-ban, MVC model alkalmazásával.",
-        "techstack": "technológiák: #csharp #cleancode #ionic",
+        "techstack": "technológiák: #csharp #cleancode #mvc",
         "source": "forrás",
         "image": "/tictactoe_mvc.png",
         "sourceLink": "https://github.com/rolcho/TicTacToe"
