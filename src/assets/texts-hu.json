@@ -48,10 +48,20 @@
       {
         "name": "tictactoe",
         "description": "clean code gyakorlat c#-ban, MVC model alkalmazásával.",
-        "techstack": "technológiák: #csharp #cleancode #ionic",
+        "techstack": "technológiák: #csharp #cleancode #mvc",
         "source": "forrás",
         "image": "/tictactoe_mvc.png",
         "sourceLink": "https://github.com/rolcho/TicTacToe"
+      },
+      {
+        "name": "todo",
+        "description": "tanuló alkalmazás állapotkezeléshez.",
+        "techstack": "technológiák: #angular #ngrx #expresss",
+        "source": "forrás",
+        "open": "lássuk",
+        "image": "/ngrx_todo.png",
+        "sourceLink": "https://github.com/rolcho/ngrx-todo",
+        "deployLink": "https://rolcho-todo-app.up.railway.app/"
       }
     ]
   }

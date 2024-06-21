@@ -52,6 +52,16 @@
         "source": "source",
         "image": "/tictactoe_mvc.png",
         "sourceLink": "https://github.com/rolcho/TicTacToe"
+      },
+      {
+        "name": "todo",
+        "description": "learning state management with ngrx.",
+        "techstack": "techstack: #angular #ngrx #expresss",
+        "source": "source",
+        "open": "open",
+        "image": "/ngrx_todo.png",
+        "sourceLink": "https://github.com/rolcho/ngrx-todo",
+        "deployLink": "https://rolcho-todo-app.up.railway.app/"
       }
     ]
   }
