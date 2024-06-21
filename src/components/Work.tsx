@@ -1,8 +1,8 @@
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
-import { Work } from "../interfaces/Work";
+import type { Work } from "../interfaces/Work";
 
-function Work(props: { workText: Work }) {
+function Work(props: Readonly<{ workText: Work }>) {
   const workText = props.workText;
   return (
     <div
@@ -29,7 +29,7 @@ function Work(props: { workText: Work }) {
               <div
                 className="bg-[#ffba18] h-[250px] border-b4 rounded-md bg-cover bg-center hover:scale-105 duration-300"
                 style={{
-                  backgroundImage: `url(${project.image})`,
+                  backgroundImage: `url(/assets/${project.image})`,
                 }}
               ></div>
               <div>

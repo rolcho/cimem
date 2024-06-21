@@ -1,18 +1,7 @@
-import IconAngular from "../assets/icons/angular.png";
-import IconCsharp from "../assets/icons/csharp.png";
-import IconDotnet from "../assets/icons/dotnet.png";
-import IconReact from "../assets/icons/react.png";
-import IconCss from "../assets/icons/css.png";
-import IconIonic from "../assets/icons/ionic.png";
-import IconJavascript from "../assets/icons/javascript.png";
-import IconMysql from "../assets/icons/mysql.png";
-import IconPostgres from "../assets/icons/postgres.png";
-import IconTypescript from "../assets/icons/typescript.png";
-import IconGithub from "../assets/icons/github.png";
-import IconHtml from "../assets/icons/html.png";
-import { Skills } from "../interfaces/Skills";
+import type { Skills } from "../interfaces/Skills";
+import { icons } from "../assets/icons";
 
-function Skills(props: { skillsText: Skills }) {
+function Skills(props: Readonly<{ skillsText: Skills }>) {
   return (
     <div
       id="skills"
@@ -31,42 +20,19 @@ function Skills(props: { skillsText: Skills }) {
             <p className="text-4xl font-bold">{props.skillsText.short}</p>
           </div>
           <div className="grid w-full grid-cols-3 gap-4 py-8 text-center sm:grid-cols-6">
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconHtml} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconCss} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconJavascript} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconTypescript} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconCsharp} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconDotnet} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconAngular} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconReact} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconIonic} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconMysql} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconPostgres} className="w-full h-full p-2" />
-            </div>
-            <div className="font-medium duration-500 text-1xl hover:scale-125">
-              <img src={IconGithub} className="w-full h-full p-2" />
-            </div>
+            {icons.map((icon) => (
+              <div
+                key={icon.name}
+                className="font-medium duration-500 text-1xl scale-80 hover:scale-125"
+              >
+                <img
+                  src={icon.name}
+                  alt={icon.alt}
+                  title={icon.alt}
+                  className="w-full h-full p-2"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
