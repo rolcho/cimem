@@ -14,7 +14,9 @@ function App() {
   const browserLanguage = navigator.language;
 
   const [typing, setTyping] = useState("");
-  const [english, setEnglish] = useState(browserLanguage !== "hu-HU");
+  const [english, setEnglish] = useState(
+    browserLanguage !== "hu-HU" && browserLanguage !== "hu"
+  );
 
   const texts = english ? LanguageEn : LanugageHu;
 

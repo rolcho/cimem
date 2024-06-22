@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
@@ -40,26 +40,18 @@ function Slider() {
     setCurrentIndex(slideIndex);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [nextSlide]);
-
   return (
     <div
       id="slider"
       className="w-full min-h-screen sm:h-screen bg-[#080e2f] text-gray-300 pt-[80px] sm:pt-0 pb-8 sm:pb-16"
     >
       <div className="flex flex-col items-center justify-center w-full h-full">
-        <div className="max-w-[1000px] w-full px-4 gap-8">
+        <div className="max-w-[1400px] w-full px-4 gap-8">
           <p className="text-3xl font-light inline border-b-4 border-[#ffba18]">
             Graphics
           </p>
         </div>
-        <div className="max-w-[1000px] h-[600px] sm:h-[80%] w-full m-auto py-16 px-4 relative group">
+        <div className="max-w-[1400px] h-[600px] sm:h-[80%] w-full m-auto py-16 px-4 relative group">
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
             className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
