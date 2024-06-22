@@ -24,12 +24,17 @@
     "home": "Kezdőlap",
     "about": "Rólam",
     "skills": "Tudásom",
+    "slider": "Logo tervek",
     "work": "Munkáim",
     "contact": "Keress meg!"
   },
   "skills": {
     "title": "#tapasztalatok",
     "short": "technológiák, amiket már használtam a munkáimban."
+  },
+  "logo": {
+    "title": "#logo tervek",
+    "short": "grafikai tervek a közelmúltból."
   },
   "work": {
     "title": "#munkáim",

@@ -24,12 +24,17 @@
     "home": "Home",
     "about": "About",
     "skills": "Skills",
+    "slider": "Logo Design",
     "work": "Work",
     "contact": "Contact"
   },
   "skills": {
     "title": "#experience",
     "short": "technologies I have already used in some of my projects."
+  },
+  "logo": {
+    "title": "#logo design",
+    "short": "some graphic design projects I have done in the past."
   },
   "work": {
     "title": "#projects",
