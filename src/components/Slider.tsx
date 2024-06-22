@@ -37,7 +37,7 @@ function Slider(props: Readonly<{ logoText: LogoText }>) {
             <p className="text-4xl font-bold pt-8">{props.logoText.short}</p>
           </div>
         </div>
-        <div className="max-w-[1000px] h-[80%] w-full py-8 relative group">
+        <div className="max-w-[1000px] h-[400px] sm:h-[80%] w-full py-8 px-8 relative group">
           <div
             style={{
               backgroundImage: `url(${slides[currentIndex].url})`,
