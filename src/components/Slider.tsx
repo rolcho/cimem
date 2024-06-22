@@ -7,6 +7,25 @@ import type { LogoText } from "../interfaces/Logo";
 function Slider(props: Readonly<{ logoText: LogoText }>) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touchStartX = e.touches[0].clientX;
+    e.currentTarget.setAttribute("data-touch-start", touchStartX.toString());
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touchStartX = Number(
+      e.currentTarget.getAttribute("data-touch-start")
+    );
+    const touchEndX = e.changedTouches[0].clientX;
+    const threshold = 50;
+
+    if (touchStartX - touchEndX > threshold) {
+      nextSlide();
+    } else if (touchEndX - touchStartX > threshold) {
+      prevSlide();
+    }
+  };
+
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
@@ -39,6 +58,8 @@ function Slider(props: Readonly<{ logoText: LogoText }>) {
         </div>
         <div className="max-w-[1000px] h-[400px] sm:h-[80%] w-full py-8 px-8 relative group">
           <div
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
             style={{
               backgroundImage: `url(${slides[currentIndex].url})`,
               backgroundSize: "contain",
