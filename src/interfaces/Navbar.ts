@@ -1,3 +1,3 @@
-export interface Navbar {
+export interface NavbarText {
   [key: string]: string;
 }

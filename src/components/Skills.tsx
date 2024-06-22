@@ -1,7 +1,7 @@
-import type { Skills } from "../interfaces/Skills";
+import type { SkillsText } from "../interfaces/Skills";
 import { icons } from "../assets/icons";
 
-function Skills(props: Readonly<{ skillsText: Skills }>) {
+function Skills(props: Readonly<{ skillsText: SkillsText }>) {
   return (
     <div
       id="skills"

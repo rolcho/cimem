@@ -1,4 +1,4 @@
-export interface Skills {
+export interface SkillsText {
   title: string;
   short: string;
 }

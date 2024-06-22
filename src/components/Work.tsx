@@ -1,8 +1,8 @@
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
-import type { Work } from "../interfaces/Work";
+import type { WorkText } from "../interfaces/Work";
 
-function Work(props: Readonly<{ workText: Work }>) {
+function Work(props: Readonly<{ workText: WorkText }>) {
   const workText = props.workText;
   return (
     <div

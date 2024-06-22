@@ -1,6 +1,6 @@
-import { About } from "../interfaces/About";
+import type { AboutText } from "../interfaces/About";
 
-function About(props: { aboutText: About }) {
+function AboutText(props: Readonly<{ aboutText: AboutText }>) {
   return (
     <div id="about" className="w-full h-screen bg-[#080e2f] text-gray-300">
       <div className="flex flex-col items-center justify-center w-full h-full">
@@ -27,4 +27,4 @@ function About(props: { aboutText: About }) {
   );
 }
 
-export default About;
+export default AboutText;

@@ -1,15 +1,15 @@
-import { About } from "./About";
-import { Contact } from "./Contact";
-import { Home } from "./Home";
-import { Navbar } from "./Navbar";
-import { Skills } from "./Skills";
-import { Work } from "./Work";
+import { AboutText } from "./About";
+import { ContactText } from "./Contact";
+import { HomeText } from "./Home";
+import { NavbarText } from "./Navbar";
+import { SkillsText } from "./Skills";
+import { WorkText } from "./Work";
 
 export interface Main {
-  about: About;
-  contact: Contact;
-  home: Home;
-  navbar: Navbar;
-  skills: Skills;
-  work: Work;
+  about: AboutText;
+  contact: ContactText;
+  home: HomeText;
+  navbar: NavbarText;
+  skills: SkillsText;
+  work: WorkText;
 }

@@ -2,12 +2,13 @@ import { useState } from "react";
 import "./App.css";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import About from "./components/About";
+import AboutText from "./components/About";
 import Skills from "./components/Skills";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import LanguageEn from "./assets/texts-en.json";
 import LanugageHu from "./assets/texts-hu.json";
+import Slider from "./components/Slider";
 
 function App() {
   const browserLanguage = navigator.language;
@@ -27,8 +28,9 @@ function App() {
         setEnglish={setEnglish}
       />
       <Home typing={typing} homeText={texts.home} />
-      <About aboutText={texts.about} />
+      <AboutText aboutText={texts.about} />
       <Skills skillsText={texts.skills} />
+      <Slider />
       <Work workText={texts.work} />
       <Contact contactText={texts.contact} />
     </div>

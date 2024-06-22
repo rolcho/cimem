@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
-import { Navbar } from "../interfaces/Navbar";
+import type { NavbarText } from "../interfaces/Navbar";
 
 import Logo from "../assets/cimem.png";
 
 function Navbar(props: {
   typing: string;
   setTyping: (arg0: string) => unknown;
-  navText: Navbar;
+  navText: NavbarText;
   english: boolean;
   setEnglish: (arg0: boolean) => unknown;
 }) {
@@ -56,8 +56,8 @@ function Navbar(props: {
       </div>
 
       <ul className="hidden md:flex">
-        {navItems.map((item) => (
-          <li className="hover:text-[#ffba18]" key={item}>
+        {navItems.map((item, itemIndex) => (
+          <li className="hover:text-[#ffba18]" key={itemIndex}>
             <Link to={item} smooth={true} duration={500}>
               {props.navText[item]}
             </Link>
@@ -88,8 +88,8 @@ function Navbar(props: {
             : "hidden"
         }
       >
-        {navItems.map((item) => (
-          <li className="py-6 text-4xl hover:text-[#ffba18]">
+        {navItems.map((item, itemIndex) => (
+          <li className="py-6 text-4xl hover:text-[#ffba18]" key={itemIndex}>
             <Link onClick={changeNav} to={item}>
               {props.navText[item]}
             </Link>

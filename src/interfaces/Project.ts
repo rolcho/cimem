@@ -1,4 +1,4 @@
-export interface Project {
+export interface ProjectText {
   name: string;
   description: string;
   techstack: string;

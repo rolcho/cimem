@@ -1,7 +1,7 @@
-import { Project } from "./Project";
+import { ProjectText } from "./Project";
 
-export interface Work {
+export interface WorkText {
   title: string;
   short: string;
-  project: Project[];
+  project: ProjectText[];
 }

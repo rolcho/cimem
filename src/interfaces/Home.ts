@@ -1,4 +1,4 @@
-export interface Home {
+export interface HomeText {
   hello: string;
   name: string;
   iam: string;

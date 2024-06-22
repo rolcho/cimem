@@ -2,9 +2,9 @@ import Typewriter from "typewriter-effect";
 import MyPhoto from "../assets/me_gf.png";
 import MyPhotoXs from "../assets/me_gf_xs.png";
 import { Link } from "react-scroll";
-import { Home } from "../interfaces/Home";
+import type { HomeText } from "../interfaces/Home";
 
-function Home(props: { typing: string; homeText: Home }) {
+function Home(props: Readonly<{ typing: string; homeText: HomeText }>) {
   return (
     <div
       id="home"
