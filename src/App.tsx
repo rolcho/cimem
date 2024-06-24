@@ -32,8 +32,8 @@ function App() {
       <Home typing={typing} homeText={texts.home} />
       <AboutText aboutText={texts.about} />
       <Skills skillsText={texts.skills} />
-      <Slider logoText={texts.logo} />
       <Work workText={texts.work} />
+      <Slider logoText={texts.logo} />
       <Contact contactText={texts.contact} />
     </div>
   );

@@ -16,7 +16,7 @@ function Navbar(props: {
   const [nav, setNav] = useState(false);
   const [size, setSize] = useState(window.innerWidth);
 
-  const navItems = ["home", "about", "skills", "slider", "work", "contact"];
+  const navItems = ["home", "about", "skills", "work", "slider", "contact"];
 
   useEffect(() => {
     function handleResize() {

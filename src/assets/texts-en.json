@@ -25,7 +25,7 @@
     "about": "About",
     "skills": "Skills",
     "slider": "Logo Design",
-    "work": "Work",
+    "work": "Development",
     "contact": "Contact"
   },
   "skills": {
@@ -37,7 +37,7 @@
     "short": "some graphic design projects I have done in the past."
   },
   "work": {
-    "title": "#projects",
+    "title": "#development",
     "short": "some experimental projects",
     "project": [
       {
