@@ -2,9 +2,9 @@ import { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import { slides } from "../assets/slides";
-import type { LogoText } from "../interfaces/Logo";
+import type { LogoTextProps } from "../interfaces/Logo";
 
-function Slider(props: Readonly<{ logoText: LogoText }>) {
+function Slider(props: Readonly<{ logoText: LogoTextProps }>) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
@@ -53,7 +53,7 @@ function Slider(props: Readonly<{ logoText: LogoText }>) {
             {props.logoText.title}
           </p>
           <div>
-            <p className="text-4xl font-bold pt-8">{props.logoText.short}</p>
+            <p className="pt-8 text-4xl font-bold">{props.logoText.short}</p>
           </div>
         </div>
         <div className="max-w-[1000px] h-[400px] sm:h-[80%] w-full py-8 px-8 relative group">
@@ -66,19 +66,24 @@ function Slider(props: Readonly<{ logoText: LogoText }>) {
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
             }}
-            className="w-full h-full rounded-2xl duration-500"
-          ></div>
+            className="w-full h-full duration-500 rounded-2xl"
+          />
           <div className="hidden group-hover:block absolute top-[50%] translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactLeft onClick={prevSlide} size={30} />
           </div>
           <div className="hidden group-hover:block absolute top-[50%] translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactRight onClick={nextSlide} size={30} />
           </div>
-          <div className="flex top-4 justify-center py-4">
-            {slides.map((_, slideIndex) => (
+          <div className="flex justify-center py-4 top-4">
+            {slides.map((slide, slideIndex) => (
               <div
-                key={slideIndex}
+                key={slide.url}
                 onClick={() => goToSlide(slideIndex)}
+                onKeyUp={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    goToSlide(slideIndex);
+                  }
+                }}
                 className="text-2xl cursor-pointer"
               >
                 <RxDotFilled

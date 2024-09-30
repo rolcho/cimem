@@ -1,6 +1,6 @@
-import type { AboutText } from "../interfaces/About";
+import type { AboutTextProps } from "../interfaces/About";
 
-function AboutText(props: Readonly<{ aboutText: AboutText }>) {
+function AboutText(props: Readonly<{ aboutText: AboutTextProps }>) {
   return (
     <div id="about" className="w-full h-screen bg-[#080e2f] text-gray-300">
       <div className="flex flex-col items-center justify-center w-full h-full">
@@ -10,7 +10,7 @@ function AboutText(props: Readonly<{ aboutText: AboutText }>) {
               {props.aboutText.title}
             </p>
           </div>
-          <div></div>
+          <div />
         </div>
         <div className="max-w-[1000px] w-full px-4 grid sm:grid-cols-2 gap-8">
           <div>

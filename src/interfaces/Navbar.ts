@@ -1,3 +1,3 @@
-export interface NavbarText {
+export type NavbarTextProps = {
   [key: string]: string;
-}
+};

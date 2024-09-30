@@ -1,4 +1,4 @@
-export interface SkillsText {
+export type SkillsTextProps = {
   title: string;
   short: string;
-}
+};

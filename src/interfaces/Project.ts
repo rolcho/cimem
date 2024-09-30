@@ -1,4 +1,4 @@
-export interface ProjectText {
+export type ProjectTextProps = {
   name: string;
   description: string;
   techstack: string;
@@ -7,4 +7,4 @@ export interface ProjectText {
   image: string;
   sourceLink: string;
   deployLink?: string;
-}
+};

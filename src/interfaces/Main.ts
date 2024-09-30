@@ -1,15 +1,15 @@
-import { AboutText } from "./About";
-import { ContactText } from "./Contact";
-import { HomeText } from "./Home";
-import { NavbarText } from "./Navbar";
-import { SkillsText } from "./Skills";
-import { WorkText } from "./Work";
+import type { AboutTextProps } from "./About";
+import type { ContactTextProps } from "./Contact";
+import type { HomeTextProps } from "./Home";
+import type { NavbarTextProps } from "./Navbar";
+import type { SkillsTextProps } from "./Skills";
+import type { WorkTextProps } from "./Work";
 
-export interface Main {
-  about: AboutText;
-  contact: ContactText;
-  home: HomeText;
-  navbar: NavbarText;
-  skills: SkillsText;
-  work: WorkText;
-}
+export type Main = {
+  about: AboutTextProps;
+  contact: ContactTextProps;
+  home: HomeTextProps;
+  navbar: NavbarTextProps;
+  skills: SkillsTextProps;
+  work: WorkTextProps;
+};

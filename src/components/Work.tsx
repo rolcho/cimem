@@ -1,8 +1,8 @@
-import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
-import type { WorkText } from "../interfaces/Work";
+import { FaGithub } from "react-icons/fa";
+import type { WorkTextProps } from "../interfaces/Work";
 
-function Work(props: Readonly<{ workText: WorkText }>) {
+function Work(props: Readonly<{ workText: WorkTextProps }>) {
   const workText = props.workText;
   return (
     <div
@@ -31,7 +31,7 @@ function Work(props: Readonly<{ workText: WorkText }>) {
                 style={{
                   backgroundImage: `url(/assets/${project.image})`,
                 }}
-              ></div>
+              />
               <div>
                 <h2 className="text-4xl font-bold text-[#ffba18]">
                   {" "}
@@ -40,15 +40,25 @@ function Work(props: Readonly<{ workText: WorkText }>) {
                 <p className="my-4">{project.description}</p>
                 <h6>{project.techstack}</h6>
                 <div className="flex gap-4 my-4">
-                  <a href={project.sourceLink} target="_blank">
-                    <button className="rounded-lg px-6 py-3 text-white border-2 hover:bg-[#ffba18] hover:border-[#ffba18] hover:text-[#080e2f] flex justify-center items-center gap-2">
+                  <a href={project.sourceLink} target="_blank" rel="noreferrer">
+                    <button
+                      type="button"
+                      className="rounded-lg px-6 py-3 text-white border-2 hover:bg-[#ffba18] hover:border-[#ffba18] hover:text-[#080e2f] flex justify-center items-center gap-2"
+                    >
                       <FaGithub />
                       {project.source}
                     </button>
                   </a>
                   {project.deployLink && (
-                    <a href={project.deployLink} target="_blank">
-                      <button className="rounded-lg px-6 py-3 text-white border-2 hover:bg-[#ffba18] hover:border-[#ffba18] hover:text-[#080e2f] flex justify-center items-center gap-2">
+                    <a
+                      href={project.deployLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button
+                        type="button"
+                        className="rounded-lg px-6 py-3 text-white border-2 hover:bg-[#ffba18] hover:border-[#ffba18] hover:text-[#080e2f] flex justify-center items-center gap-2"
+                      >
                         <CgWebsite />
                         {project.open}
                       </button>

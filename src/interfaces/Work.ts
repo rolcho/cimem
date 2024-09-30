@@ -1,7 +1,7 @@
-import { ProjectText } from "./Project";
+import type { ProjectTextProps } from "./Project";
 
-export interface WorkText {
+export type WorkTextProps = {
   title: string;
   short: string;
-  project: ProjectText[];
-}
+  project: ProjectTextProps[];
+};

@@ -1,10 +1,10 @@
+import { Link } from "react-scroll";
 import Typewriter from "typewriter-effect";
 import MyPhoto from "../assets/me_gf.png";
 import MyPhotoXs from "../assets/me_gf_xs.png";
-import { Link } from "react-scroll";
-import type { HomeText } from "../interfaces/Home";
+import type { HomeTextProps } from "../interfaces/Home";
 
-function Home(props: Readonly<{ typing: string; homeText: HomeText }>) {
+function Home(props: Readonly<{ typing: string; homeText: HomeTextProps }>) {
   return (
     <div
       id="home"
@@ -42,7 +42,10 @@ function Home(props: Readonly<{ typing: string; homeText: HomeText }>) {
             {props.homeText.long}
           </p>
           <div>
-            <button className="rounded-lg px-6 py-3 text-white border-2 hover:bg-[#ffba18] hover:border-[#ffba18] hover:text-[#080e2f]">
+            <button
+              type="button"
+              className="rounded-lg px-6 py-3 text-white border-2 hover:bg-[#ffba18] hover:border-[#ffba18] hover:text-[#080e2f]"
+            >
               <Link to="work" smooth={true} duration={500}>
                 {props.homeText.submit}
               </Link>

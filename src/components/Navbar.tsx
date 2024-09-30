@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
-import type { NavbarText } from "../interfaces/Navbar";
+import type { NavbarTextProps } from "../interfaces/Navbar";
 
 import Logo from "../assets/cimem.png";
 
 function Navbar(props: {
   typing: string;
   setTyping: (arg0: string) => unknown;
-  navText: NavbarText;
+  navText: NavbarTextProps;
   english: boolean;
   setEnglish: (arg0: boolean) => unknown;
 }) {
@@ -50,20 +50,28 @@ function Navbar(props: {
           duration={500}
           className="flex items-center justify-center gap-2"
         >
-          <img src={Logo} alt="Logo image" width={"40px"} height={"40px"} />
+          <img src={Logo} alt="Logo" width={"40px"} height={"40px"} />
           <p className="text-2xl font-light">cimem</p>
         </Link>
       </div>
 
       <ul className="hidden md:flex">
-        {navItems.map((item, itemIndex) => (
-          <li className="hover:text-[#ffba18]" key={itemIndex}>
+        {navItems.map((item) => (
+          <li className="hover:text-[#ffba18]" key={item}>
             <Link to={item} smooth={true} duration={500}>
               {props.navText[item]}
             </Link>
           </li>
         ))}
-        <li onClick={changeLanguage} className="z-10  hover:text-[#ffba18]">
+        <li
+          onClick={changeLanguage}
+          onKeyUp={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              changeLanguage();
+            }
+          }}
+          className="z-10  hover:text-[#ffba18]"
+        >
           HU/EN
         </li>
       </ul>
@@ -71,11 +79,24 @@ function Navbar(props: {
       <div className="flex items-center gap-4 md:hidden">
         <div
           onClick={changeLanguage}
+          onKeyUp={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              changeLanguage();
+            }
+          }}
           className="z-10 md:hidden hover:text-[#ffba18]"
         >
           HU/EN
         </div>
-        <div onClick={handleClick} className="z-10 hover:text-[#ffba18]">
+        <div
+          onClick={handleClick}
+          onKeyUp={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              handleClick();
+            }
+          }}
+          className="z-10 hover:text-[#ffba18]"
+        >
           {nav ? <FaTimes /> : <FaBars />}
         </div>
       </div>
@@ -88,8 +109,8 @@ function Navbar(props: {
             : "hidden"
         }
       >
-        {navItems.map((item, itemIndex) => (
-          <li className="py-6 text-4xl hover:text-[#ffba18]" key={itemIndex}>
+        {navItems.map((item) => (
+          <li className="py-6 text-4xl hover:text-[#ffba18]" key={item}>
             <Link onClick={changeNav} to={item}>
               {props.navText[item]}
             </Link>
@@ -104,6 +125,7 @@ function Navbar(props: {
               className="flex items-center justify-between w-full text-gray-300"
               href="https://www.linkedin.com/in/roland-nagy-rolcho/"
               target="_blank"
+              rel="noreferrer"
             >
               LinkedIn <FaLinkedin size={30} />
             </a>
@@ -113,6 +135,7 @@ function Navbar(props: {
               className="flex items-center justify-between w-full text-gray-300"
               href="https://github.com/rolcho"
               target="_blank"
+              rel="noreferrer"
             >
               GitHub <FaGithub size={30} />
             </a>

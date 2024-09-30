@@ -1,4 +1,4 @@
-export interface LogoText {
+export type LogoTextProps = {
   title: string;
   short: string;
-}
+};
