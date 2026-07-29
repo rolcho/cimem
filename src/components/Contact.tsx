@@ -1,20 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import type { ContactTextProps } from "../interfaces/Contact";
 
 function Contact(props: Readonly<{ contactText: ContactTextProps }>) {
-  const [isButtonDisabled, setButtonDisabled] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const isButtonDisabled = !name || !email || !message;
 
-  useEffect(() => {
-    if (name && email && message) {
-      setButtonDisabled(false);
-    } else {
-      setButtonDisabled(true);
-    }
-  }, [name, email, message]);
 
   return (
     <div

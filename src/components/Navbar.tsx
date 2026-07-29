@@ -29,7 +29,11 @@ function Navbar(props: {
 
   const handleClick = () => {
     setNav(!nav);
-    props.typing === "" ? props.setTyping("hidden") : props.setTyping("");
+    if (props.typing === "") {
+      props.setTyping("hidden");
+    } else {
+      props.setTyping("");
+    }
   };
 
   const changeNav = () => {
