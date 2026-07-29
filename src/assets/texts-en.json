@@ -47,8 +47,7 @@
         "source": "source",
         "open": "open",
         "image": "/mebay.png",
-        "sourceLink": "https://github.com/rolcho/mebay",
-        "deployLink": "https://mebay-app.fly.dev"
+        "sourceLink": "https://github.com/rolcho/mebay"
       },
       {
         "name": "tictactoe",
@@ -65,8 +64,7 @@
         "source": "source",
         "open": "open",
         "image": "/ngrx_todo.png",
-        "sourceLink": "https://github.com/rolcho/ngrx-todo",
-        "deployLink": "https://rolcho-todo-app.up.railway.app/"
+        "sourceLink": "https://github.com/rolcho/ngrx-todo"
       }
     ]
   }
